@@ -72,6 +72,7 @@ public class LoanService {
             LoanApplication loanApplication = mayBeLoanApplication.get();
 
             return LoanAccountDetailsResponse.builder()
+                    .id(loanApplication.getId())
                     .accountId(loanApplication.getAccountId())
                     .loanType(loanApplication.getLoanType())
                     .loanAmount(loanApplication.getLoanAmount())
